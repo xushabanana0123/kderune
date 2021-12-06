@@ -1,9 +1,13 @@
-#Izveidot funkciju, kas izvada sakarska elementus. Funkcijas paramenti - elementu daudzums, saraksts.
-def izdruka(daudzums, sar1):
-  for elem in range(0, daudzums):
-    print(sar1[elem])
-  return 0
 
-saraksts = [2,4,5,6,1,2,34,5]
-daudzums = int(input("Ievadi elementu skaitu: "))
-rez = izdruka(daudzums, saraksts) 
+def aprAtlaidi(summa):
+  rez = ""
+  if summa<100:
+    rez = "Atlaide nav piešķirta, jānomaksā vēl " + str(summa)
+  elif summa>=100 and summa <200:
+    rez= "Atlaide 5%, jānomaksā vēl " + str(summa*0.95)
+  else:
+    rez = "Atlaide 10%, jānomaksā vēl " + str(summa*0.9)
+  return rez
+
+summa = float(input("Ievadiet summu: "))
+print(aprAtlaidi(summa))
